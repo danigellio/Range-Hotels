@@ -1,0 +1,41 @@
+:root{
+     --primary-color: #612674; 
+}
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+html{
+     
+}
+.maxWidth{
+     max-width: 80.25em ;
+     margin: auto;
+}
+.header_top{
+     text-align: center;    
+}
+.header_top_logo{
+     padding: .7em;
+}
+.nav_header{
+     background-color: var(--primary-color);    
+}
+.nav_item{
+     list-style: none;
+}
+.nav_link{
+     text-decoration: none;
+     display: block;
+     padding: 1em;
+     color: white;    
+     text-align: center;    
+}
+.nav_link:hover{
+     background-color: color-mix(in srgb, var(--primary-color) , white 10%);
+}
+
+
+
+

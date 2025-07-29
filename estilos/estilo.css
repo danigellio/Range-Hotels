@@ -16,26 +16,65 @@ html{
 .header_top{
      text-align: center;    
 }
-.header_top_logo{
-     padding: .7em;
-}
+
 .nav_header{
      background-color: var(--primary-color);    
 }
-.nav_item{
+.nav_item{ 
      list-style: none;
 }
 .nav_link{
      text-decoration: none;
      display: block;
      padding: 1em;
-     color: white;    
-     text-align: center;    
+     color: white; 
+       
+        
 }
 .nav_link:hover{
      background-color: color-mix(in srgb, var(--primary-color) , white 10%);
 }
 
+@media screen and (min-width: 46em) {
+     .header_top{
+          margin-top: 1em;
+          display: flex;
+          justify-content: space-between;
+     }
+     .header_top_logo{
+          margin-left: 1.5em;
+     }
+     .nav_item{
+          display:inline-block ;
 
+          
+     }
+     .nav_header{
 
+          
+          background-color: initial;
+          
+          
+     }
+     .nav_link{
+           padding: 1.5em;
+           color: var(--primary-color);
+     }
+     .nav_link:hover{
+           background-color: color-mix(in srgb, var(--primary-color) , white 80%);
+     }
 
+}
+
+/*hero banner*/
+.heroBanner{
+     text-align: center;
+     background-color: #f5f5f5;
+     padding: 1em;
+}
+.heroBanner_iconPlay{
+     height: 5em;
+     width: 5em;
+     display: none;
+
+}

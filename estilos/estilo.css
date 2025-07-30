@@ -133,7 +133,7 @@ h1,h2,h3{
 }
 @media screen and (min-width: 56.25em){
      .heroBanner{
-          background-image: url(../images/bg_topo_1198x670.jpg);
+          background-image:linea url(../images/bg_topo_1198x670.jpg);
           /*aumenta ou dimunui com a mesma proporção da imagem,ou seja 1198 por 670*/
           aspect-ratio: 1198 / 670;
           display: flex;

@@ -41,8 +41,8 @@ h1,h2,h3{
 .nav_link:hover{
      background-color: color-mix(in srgb, var(--primary-color) , white 10%);
 }
-
-@media screen and (min-width: 46em) {
+/*md*/
+@media screen and (min-width: 46.93em) {
      .header_top{
           margin-top: 1em;
           display: flex;
@@ -56,12 +56,8 @@ h1,h2,h3{
 
           
      }
-     .nav_header{
-
-          
+     .nav_header{  
           background-color: initial;
-          
-          
      }
      .nav_link{
            padding: 1.5em;
@@ -109,8 +105,9 @@ h1,h2,h3{
      color: white;
      border-radius: 5px;
 }
+/*md*/
 /*deve colocar m baixo para nao sobreescrever*/
-@media screen and (min-width: 46em){
+@media screen and (min-width: 46.93em){
 
      .heroBanner{
      background-color: var(--primary-color);    
@@ -131,9 +128,10 @@ h1,h2,h3{
      
 }
 }
+/*lg*/
 @media screen and (min-width: 56.25em){
      .heroBanner{
-          background-image:linea url(../images/bg_topo_1198x670.jpg);
+          background-image: url(../images/bg_topo_1198x670.jpg);
           /*aumenta ou dimunui com a mesma proporção da imagem,ou seja 1198 por 670*/
           aspect-ratio: 1198 / 670;
           display: flex;
@@ -148,9 +146,10 @@ h1,h2,h3{
           width: 75%;
      }
 }
+/*xl*/
 @media screen and (min-width: 74em){
      .heroBanner{
-          background-image: url(../images/bg_topo_1600x1374.jpg);
+          background-image: linear-gradient(transparent, var(--primary-color)) , url(../images/bg_topo_1600x1374.jpg); /*cor transparencia e imagem juntos*/
           background-position: center top;
           background-repeat: no-repeat;
           background-color: var(--primary-color);
@@ -166,8 +165,120 @@ h1,h2,h3{
           width: 7em;
           height: 7em;
      }
-     .heroBanner_contain{
-          background-color: rgba(0, 0, 0, .4);
-          padding: 1em;
+     
+}
+
+/*min-width:0 -> col-sm
+min-width:48.75em -> col-md
+min-width:56.25em -> col-lg
+min-width:74em -> col-xl
+*/
+.middleContent{
+     background-color: #f6f6f6;
+     text-align: center;
+     padding:2em ;
+}
+.middleContent a{
+     color: inherit;
+     text-decoration: none;
+     
+}
+.middleContent_title{
+     text-transform: uppercase;
+     color: var(--primary-color);
+     font-size: 1.25em;
+     padding: .3em;
+}
+/*toda span que começa com icon-*/
+.middleContent span[class^="icon-"]{
+     color: var(--primary-color);
+     font-size: 3.5em;
+
+}
+.middleContent{
+     line-height: 1.5; /*somente numero*/
+}
+.middleContent article{
+     padding: 1em 0;
+}
+.row{
+     display: flex;
+     flex-wrap: wrap;
+     gap:1rem ;
+    
+}
+.col{
+     flex: 1 0 auto; /*ele cresce, nao diminui, flex basis dependo do width do proprio elemento*/
+     width: 100%; /*padrao*/
+     
+}
+.col-sm-12{
+     width: 100%;
+}
+@media screen and (min-width: 46em) {
+     .col-md-6{
+          width: calc(50% - 1rem);/*1rem do gap do row, podemos fazer uma variavel, do gap, assim fica mais facil se formos mudas depois*/
      }
+     
+}
+@media screen and (min-width: 74em){
+     .col-xl-3{
+          width: calc(25% - 1rem);
+     }
+     .col-xl-6{
+          width: calc(50% - 1rem);
+     }
+}
+     
+.mainContent{
+     outline: 1px solid green;
+     padding: 2em;
+}
+.mainContent p {
+     line-height: 1.2;
+     
+}
+.mainContent_img img{
+     width: 100%;
+}
+.mainContent_title{
+     text-transform: uppercase;
+     color: var(--primary-color);
+     font-weight: normal;
+     letter-spacing: .2em;
+     font-size: 1.25em;
+     padding: .5rem 0 .2rem 0;
+     
+}
+/*row-gap
+colunm-gap
+gap: 4em 1em*/
+
+
+/*arrumando as imagens*/
+@media screen and (min-width:37.5em) {
+     .mainContent_container {
+          display: flex;
+          gap: 2em;
+          align-items: flex-start;
+          
+     }
+     .mainContent_title{
+          padding-top: 0;
+     }
+     .mainContent_img{ /*determinando a altura da imagem*/
+          max-height: 382px;
+          flex:0 0 25%;
+     }
+     .mainContent_text{
+          flex-grow: 1;
+     }
+}
+.footer{
+     background-color: gray;
+     padding: 2em;
+}
+.footer p {
+     text-align: center;
+     line-height: 1.5;
 }

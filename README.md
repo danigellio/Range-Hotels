@@ -9,7 +9,6 @@ Site institucional fictício desenvolvido com **HTML5 e CSS3**, focado em **layo
 - HTML5  
 - CSS3  
 - Flexbox
-- Grid
 - Media Queries  
 - Google Fonts  
 - GitHub Pages  
